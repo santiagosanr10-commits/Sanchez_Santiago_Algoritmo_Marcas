@@ -1,12 +1,12 @@
 :root {
   --bg: #0b0b0b;
-  --panel: #111111;
-  --panel2: #0f0f0f;
-  --border: #242424;
+  --panel: #141414;
+  --panel2: #1b1b1b;
+  --border: #2a2a2a;
   --text: #ffffff;
-  --muted: rgba(255,255,255,.75);
-  --orange: #ff7a00;
-  --orange2: #ff9a3c;
+  --muted: rgba(255,255,255,.7);
+  --accent: #ff7a00;
+
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
@@ -22,19 +22,13 @@ body {
   padding: 18px;
 }
 
-h1 {
-  margin: 8px 0 6px;
-}
-
 .sub {
-  margin: 0 0 6px;
   color: var(--muted);
 }
 
 .grid {
   display: grid;
   gap: 14px;
-  grid-template-columns: 1fr;
 }
 
 @media (min-width: 900px) {
@@ -60,40 +54,29 @@ label {
 select {
   width: 100%;
   padding: 10px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
   background: var(--panel2);
   color: var(--text);
-  outline: none;
-}
-
-select:focus {
-  border-color: var(--orange);
-  box-shadow: 0 0 0 2px rgba(255,122,0,.15);
+  border-radius: 10px;
+  border: 1px solid var(--border);
 }
 
 .row {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
   margin-top: 12px;
 }
 
 button {
   cursor: pointer;
-  border: 0;
+  border: none;
   border-radius: 12px;
   padding: 10px 12px;
   font-weight: 700;
 }
 
 .primary {
-  background: var(--orange);
-  color: var(--bg);
-}
-
-.primary:hover {
-  filter: brightness(1.05);
+  background: var(--accent);
+  color: #000;
 }
 
 .ghost {
@@ -102,26 +85,24 @@ button {
   border: 1px solid var(--border);
 }
 
-.ghost:hover {
-  border-color: var(--orange);
-}
-
 .danger {
   background: #b32121;
-  color: var(--text);
+  color: #fff;
 }
 
+/* 🔴 TEXTO DE LA PREGUNTA */
 .question {
   background: var(--panel2);
   border: 1px solid var(--border);
-  padding: 10px;
+  padding: 12px;
   border-radius: 12px;
-  color: var(--text);
+  color: #ffffff;
+  font-weight: 600;
 }
 
+/* 🔴 DUELO A/B */
 .duel {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 10px;
   margin-top: 10px;
 }
@@ -134,30 +115,33 @@ button {
 
 .pick {
   background: var(--panel2);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
+  padding: 16px;
   text-align: left;
-  padding: 14px;
+  color: #ffffff;
 }
 
 .pick:hover {
-  border-color: var(--orange);
+  border-color: var(--accent);
 }
 
 .tag {
   display: inline-block;
   width: 26px;
   height: 26px;
-  border-radius: 8px;
-  text-align: center;
   line-height: 26px;
+  text-align: center;
+  border-radius: 8px;
   margin-right: 10px;
-  background: var(--orange);
-  color: var(--bg);
+  background: var(--accent);
+  color: #000;
   font-weight: 900;
 }
 
 .title {
-  vertical-align: middle;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .topbox {
@@ -176,12 +160,7 @@ button {
 }
 
 .toprow:last-child {
-  border-bottom: 0;
-}
-
-.hint {
-  color: var(--muted);
-  margin: 10px 0 0;
+  border-bottom: none;
 }
 
 .foot {
