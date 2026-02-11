@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BrandMash — Ranking de marcas famosas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="wrap">
+    <h1>🏷️ BrandMash</h1>
+    <p class="sub">Comparación A/B para medir fama de marcas por perfil y contexto.</p>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card">
+      <h2>1) Configura</h2>
+
+      <label>Perfil de quien responde</label>
+      <select id="segmentSelect"></select>
+
+      <label>Contexto de fama</label>
+      <select id="contextSelect"></select>
+
+      <div class="row">
+        <button id="btnNewPair" class="ghost">🔁 Nueva comparación</button>
+        <button id="btnReset" class="danger">🧹 Reiniciar</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2) Elige la más famosa</h2>
+      <p id="question" class="question">—</p>
+
+      <div class="duel">
+        <button id="btnA" class="pick">
+          <span class="tag">A</span>
+          <span id="labelA" class="title">—</span>
+        </button>
+
+        <button id="btnB" class="pick">
+          <span class="tag">B</span>
+          <span id="labelB" class="title">—</span>
+        </button>
+      </div>
+
+      <div class="row">
+        <button id="btnExport" class="ghost">⬇️ Exportar votos</button>
+        <button id="btnShowTop" class="primary">🏆 Ver Top 10</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3) Ranking de fama</h2>
+      <div id="topBox" class="topbox"></div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <small>Algoritmo de comparación A/B + Elo — fama percibida de marcas.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
